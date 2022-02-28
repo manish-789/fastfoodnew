@@ -11,7 +11,7 @@
 
     <EditText
         android:id="@+id/verifycode"
-        android:layout_width="356dp"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/btnverifyotp"
-        android:layout_width="match_parent"
+        android:layout_width="311dp"
         android:layout_height="60dp"
         android:background="#FFC107"
         android:text="Send otp"
