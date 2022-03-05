@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:ems="10"
-        android:hint="+91"
+        android:text="+91"
         android:inputType="phone"
         android:minHeight="48dp"
         android:textStyle="bold"
