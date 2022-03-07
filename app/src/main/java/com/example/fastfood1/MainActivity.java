@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseAuth.getInstance().signInWithCredential(credential)
                 .addOnCompleteListener(task -> {
                     if(task.isSuccessful()){
-                        startActivity(new Intent(MainActivity.this,HomePage.class));
+                        startActivity(new Intent(MainActivity.this,HomeActivity.class));
                         finish();
 
                     } else{
