@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startActivity(new Intent(this,HomeActivity.class));
         FirebaseApp.initializeApp(this);
 
        buttonotp = findViewById(R.id.buttonotp);
@@ -75,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
                                            Dialog dialog=new Dialog(MainActivity.this);
                                            dialog.setContentView(R.layout.verify_popup);
+
+                                           dialog.setCanceledOnTouchOutside(false);
                                            EditText verifycode = dialog.findViewById(R.id.verifycode);
                                            Button btnverifyotp = dialog.findViewById(R.id.btnverifyotp);
                                            verifycode.setOnClickListener(new View.OnClickListener() {
