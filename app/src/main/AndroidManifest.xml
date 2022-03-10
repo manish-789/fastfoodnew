@@ -14,9 +14,6 @@
             android:exported="false"
             android:label="@string/title_activity_home" />
         <activity
-            android:name=".HomePage"
-            android:exported="false" />
-        <activity
             android:name=".verificationotp"
             android:exported="false" />
         <activity
