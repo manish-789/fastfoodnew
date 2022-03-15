@@ -9,8 +9,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 
+import com.example.fastfood1.FoodItem;
+import com.example.fastfood1.FoodItemAdapter;
+import com.example.fastfood1.R;
 import com.example.fastfood1.databinding.FragmentHomeBinding;
+
+import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
@@ -20,8 +26,12 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-        final TextView textView = binding.textHome;
+        ArrayList<FoodItem> foodItems=new ArrayList();
+        foodItems.add(new FoodItem("Bhel Puri",R.drawable.bhel));
+        foodItems.add(new FoodItem("Bhel Puri",R.drawable.bhel));
+        foodItems.add(new FoodItem("Bhel Puri",R.drawable.bhel));
+        binding.recyclerview.setAdapter(new FoodItemAdapter(requireContext(), foodItems));
+        binding.recyclerview.setLayoutManager(new GridLayoutManager(requireContext(),2));
         return root;
     }
 
