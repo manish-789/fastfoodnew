@@ -1,12 +1,14 @@
 package com.example.fastfood1;
 
 public class FoodItem {
-    String foodName;
-    int foodImg;
+    private String foodName;
+    private int foodImg;
+    private int price;
 
-    public FoodItem(String foodName, int foodImg) {
+    public FoodItem(String foodName, int foodImg, int price) {
         this.foodName = foodName;
         this.foodImg = foodImg;
+        this.price = price;
     }
 
     public String getFoodName() {
@@ -23,5 +25,13 @@ public class FoodItem {
 
     public void setFoodImg(int foodImg) {
         this.foodImg = foodImg;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }
