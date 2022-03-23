@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseApp.initializeApp(this);
+        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
+            startActivity(new Intent(this, HomeActivity.class));
+        }
 
        buttonotp = findViewById(R.id.buttonotp);
        editPhonenumber = findViewById(R.id.editPhonenumber);
@@ -59,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
                                        public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                                            signInUser(phoneAuthCredential);
                                            Log.d(TAG, "onVerificationCompleted:");
-
                                        }
 
                                        @Override
